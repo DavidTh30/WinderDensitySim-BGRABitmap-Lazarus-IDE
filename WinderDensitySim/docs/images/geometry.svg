@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Segoe UI, Tahoma, sans-serif" font-size="13">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <rect width="900" height="560" fill="#ffffff"/>
+  <text x="450" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">WinderDensity 1 — เรขาคณิตของเครื่อง (มองด้านข้าง)</text>
+
+  <!-- winder -->
+  <circle cx="300" cy="330" r="190" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="300" cy="330" r="90" fill="#cbd5e1" stroke="#475569" stroke-width="2"/>
+  <circle cx="300" cy="330" r="12" fill="#334155"/>
+  <text x="300" y="320" text-anchor="middle" font-weight="bold">Mill roll</text>
+  <text x="300" y="370" text-anchor="middle">D0 = 450 mm</text>
+  <text x="200" y="470" fill="#6d28d9">ฟิล์มที่ม้วนแล้ว R(t)</text>
+  <line x1="300" y1="330" x2="110" y2="330" stroke="#6d28d9" stroke-dasharray="4 3"/>
+  <text x="150" y="324" fill="#6d28d9">R(t)</text>
+  <line x1="300" y1="330" x2="300" y2="240" stroke="#475569" stroke-dasharray="4 3"/>
+  <text x="306" y="290" fill="#475569">R0</text>
+
+  <!-- contact roll at -40 deg -->
+  <line x1="300" y1="330" x2="560" y2="112" stroke="#94a3b8" stroke-width="10" stroke-linecap="round" opacity="0.6"/>
+  <circle cx="484" cy="176" r="50" fill="#334155" stroke="#0f172a" stroke-width="2"/>
+  <circle cx="484" cy="176" r="40" fill="#cbd5e1"/>
+  <circle cx="484" cy="176" r="6" fill="#0f172a"/>
+  <text x="545" y="190" font-weight="bold">Contact roll</text>
+  <text x="545" y="208">Dc = 250 mm (ยาง Er)</text>
+  <path d="M370,330 A70,70 0 0 0 353.6,285" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="378" y="312" fill="#dc2626">θ = −40°</text>
+  <text x="575" y="104" fill="#475569">รางเลื่อน carriage (แนวรัศมี)</text>
+
+  <!-- idler + film -->
+  <circle cx="740" cy="98" r="18" fill="#94a3b8" stroke="#334155"/>
+  <text x="768" y="102">Idler</text>
+  <path d="M890,80 L740,80 L475.3,126.8 A50,50 0 0 0 445.7,208.1" fill="none" stroke="#f59e0b" stroke-width="4"/>
+  <path d="M445.7,208.1 A190,190 0 0 1 300,140" fill="none" stroke="#f59e0b" stroke-width="4"/>
+  <path d="M860,70 L800,70" stroke="#0f172a" stroke-width="1.5" marker-end="url(#ar)"/>
+  <text x="790" y="60">ฟิล์มเข้า V, Tw</text>
+
+  <!-- nip + air wedge -->
+  <circle cx="445.7" cy="208.1" r="6" fill="#dc2626"/>
+  <polygon points="445.7,208.1 432,230 448,234" fill="#f87171" opacity="0.8"/>
+  <text x="380" y="252" fill="#dc2626" font-weight="bold">NIP</text>
+  <text x="330" y="270" fill="#dc2626">อากาศเข้า h0, hn</text>
+  <path d="M520,140 L500,160" stroke="#dc2626" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="505" y="132" fill="#dc2626">N (N/m)</text>
+
+  <!-- legend -->
+  <rect x="560" y="300" width="320" height="230" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="575" y="324" font-weight="bold">สมมติฐาน (Program 1)</text>
+  <text x="575" y="348">• Mill roll = แกนม้วน D0 450 mm (หมุน center drive)</text>
+  <text x="575" y="370">• Contact roll บนรางแนวรัศมี มุม −40°</text>
+  <text x="575" y="392">   ถอยออกตามม้วนที่โตขึ้น</text>
+  <text x="575" y="414">• ฟิล์มมาจาก idler พันด้านบน contact roll</text>
+  <text x="575" y="436">   แล้วเข้า nip</text>
+  <text x="575" y="458">• V คงที่ → rpm ม้วนลดลงเมื่อ Ø โตขึ้น</text>
+  <text x="575" y="480">• Nip: Hertz line contact (ยางกับม้วน)</text>
+  <text x="575" y="502">• แรงตึงลดลงแบบ hyperbolic taper</text>
+</svg>
