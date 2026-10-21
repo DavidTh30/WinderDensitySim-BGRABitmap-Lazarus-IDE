@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="Segoe UI, Tahoma, sans-serif" font-size="13">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f172a"/>
+    </marker>
+    <clipPath id="pa"><rect x="10" y="40" width="320" height="300"/></clipPath>
+    <clipPath id="pb"><rect x="340" y="40" width="320" height="300"/></clipPath>
+    <clipPath id="pc"><rect x="670" y="40" width="320" height="300"/></clipPath>
+  </defs>
+  <rect width="1000" height="560" fill="#ffffff"/>
+  <text x="500" y="26" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">WinderDensity 3 — เส้นทางฟิล์มตามตำแหน่ง Tension roll (lead)</text>
+
+  <!-- panel A : lead < 0 -->
+  <rect x="10" y="40" width="320" height="300" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <g clip-path="url(#pa)">
+    <circle cx="260" cy="170" r="120" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle cx="260" cy="170" r="55" fill="#cbd5e1" stroke="#475569"/>
+    <circle cx="105" cy="170" r="35" fill="#334155"/>
+    <circle cx="65" cy="254" r="35" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+    <path d="M15,289 L65,289 A35,35 0 0 0 96.6,269.1 L136.6,185.1 A35,35 0 0 0 140,170 A120,120 0 0 1 147.2,129" fill="none" stroke="#f59e0b" stroke-width="4"/>
+    <circle cx="140" cy="170" r="5" fill="#dc2626"/>
+    <path d="M136.6,185.1 A35,35 0 0 0 140,170" fill="none" stroke="#2563eb" stroke-width="7" opacity="0.6"/>
+  </g>
+  <text x="20" y="62" font-weight="bold">A) lead &lt; 0 : Tension roll อยู่หลัง</text>
+  <text x="20" y="318">ฟิล์มพัน Contact roll βC ก่อนเข้า nip</text>
+  <text x="20" y="334">φ &gt; 0 (เอียงเข้าหาม้วน) — ไม่เพิ่มอากาศ</text>
+
+  <!-- panel B : lead = 0 -->
+  <rect x="340" y="40" width="320" height="300" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <g clip-path="url(#pb)">
+    <circle cx="590" cy="170" r="120" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle cx="590" cy="170" r="55" fill="#cbd5e1" stroke="#475569"/>
+    <circle cx="435" cy="170" r="35" fill="#334155"/>
+    <circle cx="435" cy="254" r="35" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+    <path d="M345,289 L435,289 A35,35 0 0 0 470,254 L470,170 A120,120 0 0 1 477.2,129" fill="none" stroke="#f59e0b" stroke-width="4"/>
+    <circle cx="470" cy="170" r="5" fill="#dc2626"/>
+  </g>
+  <text x="350" y="62" font-weight="bold">B) lead = 0 : ตรงกัน</text>
+  <text x="350" y="318">ฟิล์มแนวดิ่งตรงเข้า nip, θT = 90°</text>
+  <text x="350" y="334">φ = 0</text>
+
+  <!-- panel C : lead > 0 -->
+  <rect x="670" y="40" width="320" height="300" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <g clip-path="url(#pc)">
+    <circle cx="920" cy="170" r="120" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle cx="920" cy="170" r="55" fill="#cbd5e1" stroke="#475569"/>
+    <circle cx="765" cy="170" r="35" fill="#334155"/>
+    <circle cx="785" cy="254" r="35" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+    <path d="M675,289 L785,289 A35,35 0 0 0 818.1,242.6 L806.6,209.2 A120,120 0 0 1 807.2,129" fill="none" stroke="#f59e0b" stroke-width="4"/>
+    <path d="M806.6,209.2 A120,120 0 0 1 800,170" fill="none" stroke="#dc2626" stroke-width="8" opacity="0.6"/>
+    <circle cx="800" cy="170" r="5" fill="#dc2626"/>
+  </g>
+  <text x="680" y="62" font-weight="bold">C) lead &gt; 0 : Tension roll ล้ำหน้า</text>
+  <text x="680" y="318">ฟิล์มแตะม้วนก่อน nip (pre-wrap βW)</text>
+  <text x="680" y="334">φ &lt; 0 — อากาศเข้าเพิ่ม, ρ ลดลง</text>
+
+  <!-- legend / axes -->
+  <rect x="10" y="356" width="980" height="190" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <circle cx="34" cy="384" r="10" fill="#334155"/><text x="52" y="389">Contact roll — Linear motor (กด: ควบคุมแรง N / ถอย: ระยะ RetractMm)</text>
+  <circle cx="34" cy="412" r="10" fill="#e2e8f0" stroke="#475569"/><text x="52" y="417">Tension roll — Servo + ball screw, ตำแหน่ง = Contact roll X + lead (ตามกันแบบ electronic gearing)</text>
+  <line x1="24" y1="440" x2="44" y2="440" stroke="#f59e0b" stroke-width="4"/><text x="52" y="445">ฟิล์ม: เข้าแนวนอนใต้ Tension roll → พัน θT → span อิสระ → (พัน Contact βC) / (pre-wrap βW) → nip</text>
+  <line x1="24" y1="468" x2="44" y2="468" stroke="#dc2626" stroke-width="6" opacity="0.6"/><text x="52" y="473">ช่วง pre-wrap บนม้วน: อากาศเพิ่ม Kw·hT·(1 − e^(−βW/β0))</text>
+  <text x="24" y="501">Collision guard: |T − W| ≥ R + Rt + clearance → lead ถูกจำกัด (ขึ้น LIMIT) เมื่อม้วนโตจนชน</text>
+  <text x="24" y="525">พิกัดในโค้ด: จุดศูนย์กลาง Winder = (0,0), x ไปทางขวา, y ลง; Cx = −(R + Rc + gap), Ty = 2Rc + g, Tx = Cx + lead</text>
+</svg>

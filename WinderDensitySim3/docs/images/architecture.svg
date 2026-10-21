@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 640" font-family="Segoe UI, Tahoma, sans-serif" font-size="13">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="980" height="640" fill="#ffffff"/>
+  <text x="490" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">โครงสร้างโค้ด WinderDensity 3 (units / forms / events)</text>
+
+  <rect x="390" y="48" width="200" height="46" rx="8" fill="#f1f5f9" stroke="#64748b"/>
+  <text x="490" y="68" text-anchor="middle" font-weight="bold">WinderDensity3.lpr</text>
+  <text x="490" y="85" text-anchor="middle" fill="#475569">CreateForm(TfrmMain)</text>
+
+  <rect x="290" y="120" width="400" height="160" rx="8" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="490" y="142" text-anchor="middle" font-weight="bold" fill="#1d4ed8">uMain — TfrmMain  (หน้าต่าง Graphics)</text>
+  <text x="306" y="165">• ปุ่ม + TParamSlider, ปุ่ม Press/Retract, Jog servo</text>
+  <text x="306" y="185">• TTimer 33 ms: Step + UpdateAxes (LM/Servo real time)</text>
+  <text x="306" y="205">• RefreshSideWindows (ทุก 3 tick ขณะเดิน, 15 tick ขณะหยุด)</text>
+  <text x="306" y="225">• DoPanelCmd(Cmd) ← Manual Panel ; FEStop</text>
+  <text x="306" y="245">• RenderView(0..3) / ViewSize → Export</text>
+  <text x="306" y="265">• ApplyCmdLine (lead=, retract, end, cross, top, panel ...)</text>
+
+  <rect x="20" y="310" width="250" height="175" rx="8" fill="#f0fdf4" stroke="#22c55e"/>
+  <text x="145" y="332" text-anchor="middle" font-weight="bold" fill="#15803d">uWinderModel</text>
+  <text x="32" y="355">TWinderParams, TLayer</text>
+  <text x="32" y="375">TGeo (เส้นทางฟิล์ม), TAirInfo</text>
+  <text x="32" y="395">TNipInfo, TCDProfile</text>
+  <text x="32" y="415">TWinderSim: Step / Solve /</text>
+  <text x="32" y="435">  UpdateAxes / Geo / AirAt /</text>
+  <text x="32" y="455">  CDProfile / LinForceN / Servo..</text>
+  <text x="32" y="475">Tangent(), MoveAxis(), SegDist()</text>
+
+  <rect x="285" y="310" width="210" height="110" rx="8" fill="#fefce8" stroke="#eab308"/>
+  <text x="390" y="332" text-anchor="middle" font-weight="bold" fill="#a16207">uWinderDraw</text>
+  <text x="297" y="355">RenderScene, DrawMachine</text>
+  <text x="297" y="375">DrawChart, Txt, Badge, Arrow</text>
+  <text x="297" y="395">MetalDisc, LerpC, สี C_*</text>
+  <text x="297" y="412" fill="#64748b" font-size="12">helper ใช้ร่วมทุกหน้าต่าง</text>
+
+  <rect x="510" y="310" width="215" height="80" rx="8" fill="#ecfeff" stroke="#06b6d4"/>
+  <text x="617" y="332" text-anchor="middle" font-weight="bold" fill="#0e7490">uCrossView — TfrmCross</text>
+  <text x="522" y="355">RenderCross: ภาพแนวขวาง</text>
+  <text x="522" y="375">+ กราฟ N(u), δ(u), ρ(u)</text>
+
+  <rect x="510" y="400" width="215" height="80" rx="8" fill="#ecfeff" stroke="#06b6d4"/>
+  <text x="617" y="422" text-anchor="middle" font-weight="bold" fill="#0e7490">uTopView — TfrmTop</text>
+  <text x="522" y="445">RenderTop: มองจากด้านบน</text>
+  <text x="522" y="465">Phase = การเคลื่อนของฟิล์ม</text>
+
+  <rect x="740" y="310" width="220" height="100" rx="8" fill="#fef2f2" stroke="#ef4444"/>
+  <text x="850" y="332" text-anchor="middle" font-weight="bold" fill="#b91c1c">uManualPanel — TfrmPanel</text>
+  <text x="752" y="355">ปุ่ม/ไฟ/จอแสดงผล (HMI)</text>
+  <text x="752" y="375">OnCommand(PC_*) → main</text>
+  <text x="752" y="395">RenderTo(bmp) สำหรับ export</text>
+
+  <rect x="740" y="425" width="220" height="100" rx="8" fill="#fdf4ff" stroke="#c026d3"/>
+  <text x="850" y="447" text-anchor="middle" font-weight="bold" fill="#a21caf">uDevForm — TfrmDev</text>
+  <text x="752" y="470">Live / Formulas / Layers /</text>
+  <text x="752" y="490">Coefficients / Export</text>
+  <text x="752" y="510">OnParamsChanged → Reset</text>
+
+  <rect x="740" y="545" width="220" height="70" rx="8" fill="#fff7ed" stroke="#f97316"/>
+  <text x="850" y="567" text-anchor="middle" font-weight="bold" fill="#c2410c">uExportTab — TExportPanel</text>
+  <text x="752" y="590">PNG / GIF (Live, Time-lapse)</text>
+  <text x="752" y="607">เลือกหน้า 0..3 + Developer</text>
+
+  <path d="M490,94 L490,118" stroke="#475569" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M330,280 L170,308" stroke="#475569" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M400,280 L392,308" stroke="#475569" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M540,280 L600,308" stroke="#475569" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M640,280 L820,308" stroke="#475569" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M690,250 C960,250 960,430 962,440" stroke="#475569" stroke-width="1.6" fill="none" marker-end="url(#ar)"/>
+  <path d="M850,525 L850,543" stroke="#475569" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M800,310 C760,290 720,240 692,235" stroke="#ef4444" stroke-width="1.4" stroke-dasharray="5 3" fill="none" marker-end="url(#ar)"/>
+  <text x="700" y="222" fill="#b91c1c" font-size="12">OnCommand</text>
+  <text x="20" y="520" fill="#475569" font-size="12">ลูกศรทึบ = uses / เป็นเจ้าของ ; เส้นประ = callback (event)</text>
+  <text x="20" y="540" fill="#475569" font-size="12">ทุกหน้าต่างอ่าน TWinderSim ตัวเดียวกัน (FSim) — ไม่มีการคัดลอกข้อมูล</text>
+  <text x="20" y="560" fill="#475569" font-size="12">ฟอร์มทั้งหมดสร้างด้วยโค้ด (CreateNew) ไม่มีไฟล์ .lfm</text>
+</svg>
