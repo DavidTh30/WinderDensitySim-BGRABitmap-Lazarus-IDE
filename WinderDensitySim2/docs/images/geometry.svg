@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="Segoe UI, Tahoma, sans-serif" font-size="13">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <rect width="900" height="580" fill="#ffffff"/>
+  <text x="450" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">WinderDensity 2 — เรขาคณิตของเครื่อง (มองด้านข้าง)</text>
+
+  <!-- centre line -->
+  <line x1="60" y1="300" x2="790" y2="300" stroke="#94a3b8" stroke-dasharray="8 4"/>
+  <text x="680" y="292" fill="#64748b">เส้นศูนย์กลาง Winder = Contact roll</text>
+
+  <!-- winder -->
+  <circle cx="560" cy="300" r="190" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="560" cy="300" r="90" fill="#cbd5e1" stroke="#475569" stroke-width="2"/>
+  <circle cx="560" cy="300" r="12" fill="#334155"/>
+  <text x="560" y="290" text-anchor="middle" font-weight="bold">Mill roll</text>
+  <text x="560" y="340" text-anchor="middle">D0 = 450 mm</text>
+  <text x="640" y="470" fill="#6d28d9">WINDER (คงที่ ด้านขวา)</text>
+
+  <!-- carriage + cylinder -->
+  <rect x="312" y="260" width="16" height="200" rx="4" fill="#94a3b8"/>
+  <rect x="80" y="288" width="120" height="24" rx="4" fill="#cbd5e1" stroke="#475569"/>
+  <line x1="200" y1="300" x2="312" y2="300" stroke="#475569" stroke-width="5"/>
+  <text x="84" y="280">กระบอกลม (n × Ø bore)</text>
+  <path d="M215,276 L265,276" stroke="#dc2626" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="80" y="336" fill="#dc2626">F_cyl = N·W</text>
+  <path d="M260,470 L200,470" stroke="#0f172a" stroke-width="1.5" marker-end="url(#ar)"/>
+  <text x="80" y="490">carriage ถอยตามม้วนที่โต (stroke = R − R0)</text>
+
+  <!-- contact roll -->
+  <circle cx="320" cy="300" r="50" fill="#334155" stroke="#0f172a" stroke-width="2"/>
+  <circle cx="320" cy="300" r="40" fill="#cbd5e1"/>
+  <text x="320" y="238" text-anchor="middle" font-weight="bold">Contact roll Dc</text>
+  <!-- tension roll -->
+  <circle cx="320" cy="424" r="50" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+  <rect x="310" y="416" width="20" height="16" fill="#facc15" stroke="#a16207"/>
+  <text x="320" y="428" text-anchor="middle" font-size="10" font-weight="bold">LC</text>
+  <text x="250" y="524" font-weight="bold">Tension roll Dt = Dc</text>
+  <!-- gap -->
+  <line x1="255" y1="350" x2="255" y2="374" stroke="#0f172a"/>
+  <text x="200" y="366">ช่อง g</text>
+
+  <!-- web -->
+  <path d="M40,474 L320,474 A50,50 0 0 0 370,424 L370,300 A190,190 0 0 1 387.8,219.7" fill="none" stroke="#f59e0b" stroke-width="4"/>
+  <path d="M60,484 L120,484" stroke="#0f172a" stroke-width="1.5" marker-end="url(#ar)"/>
+  <text x="44" y="504">ฟิล์มเข้า V, Tw</text>
+  <path d="M382,400 L382,340" stroke="#0f172a" stroke-width="1.5" marker-end="url(#ar)"/>
+  <text x="390" y="380">span Ls = Dc + g</text>
+  <text x="380" y="452">wrap θ = 90°</text>
+  <!-- load cell force -->
+  <path d="M320,424 L280,384" stroke="#dc2626" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="196" y="400" fill="#dc2626">F_LC = √2·Tw·W</text>
+
+  <!-- nip -->
+  <circle cx="370" cy="300" r="6" fill="#dc2626"/>
+  <polygon points="370,300 371,326 382,324" fill="#f87171"/>
+  <text x="378" y="286" fill="#dc2626" font-weight="bold">NIP (บนเส้นศูนย์กลางเสมอ)</text>
+
+  <rect x="560" y="500" width="330" height="70" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="572" y="522">• ฟิล์มสัมผัส Contact roll และ Winder พร้อมกันที่ nip</text>
+  <text x="572" y="542">• Contact + Tension roll อยู่บน carriage เดียวกัน</text>
+  <text x="572" y="562">• Load cell วัดแรงลัพธ์ที่มุม 45° (ซ้าย-บน)</text>
+</svg>

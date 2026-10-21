@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="Segoe UI, Tahoma, sans-serif" font-size="13">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="960" height="560" fill="#ffffff"/>
+  <text x="480" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">โครงสร้างโค้ด WinderDensity 2 (units / forms / events)</text>
+
+  <rect x="380" y="50" width="200" height="50" rx="8" fill="#f1f5f9" stroke="#64748b"/>
+  <text x="480" y="72" text-anchor="middle" font-weight="bold">WinderDensity2.lpr</text>
+  <text x="480" y="90" text-anchor="middle" fill="#475569">CreateForm(TfrmMain)</text>
+
+  <rect x="300" y="135" width="360" height="135" rx="8" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="480" y="157" text-anchor="middle" font-weight="bold" fill="#1d4ed8">uMain — TfrmMain  (หน้าต่าง Graphics)</text>
+  <text x="316" y="180">• ScrollBox ซ้าย: ปุ่ม + TParamSlider (TTrackBar)</text>
+  <text x="316" y="200">• TPaintBox + TBGRABitmap (double buffer)</text>
+  <text x="316" y="220">• TTimer 33 ms → FSim.Step(dt·SimMult) → Invalidate</text>
+  <text x="316" y="240">• RenderView / ViewSize / DevSimAdvanced (export)</text>
+  <text x="316" y="260">• ApplyCmdLine (end, dev, devtab=, png:, gif:)</text>
+
+  <rect x="20" y="310" width="270" height="150" rx="8" fill="#f0fdf4" stroke="#22c55e"/>
+  <text x="155" y="332" text-anchor="middle" font-weight="bold" fill="#15803d">uWinderModel</text>
+  <text x="34" y="355">TWinderParams (record, ค่าทั้งหมด)</text>
+  <text x="34" y="375">TLayer (ข้อมูลต่อชั้น)</text>
+  <text x="34" y="395">TWinderSim: Step, AddLayer, Solve,</text>
+  <text x="34" y="415">  AirAt, NipCalc, LoadCellN, CylPressBar ..</text>
+  <text x="34" y="435">FF(), HMS(), FSDot</text>
+  <text x="34" y="452" fill="#64748b" font-size="12">ไม่มี LCL — ทดสอบแยกได้</text>
+
+  <rect x="310" y="310" width="300" height="150" rx="8" fill="#fefce8" stroke="#eab308"/>
+  <text x="460" y="332" text-anchor="middle" font-weight="bold" fill="#a16207">uWinderDraw</text>
+  <text x="324" y="355">RenderScene(bmp, Sim, angles, mult, run)</text>
+  <text x="324" y="375">DrawMachine (ภาพเครื่อง + วงแหวน ρ)</text>
+  <text x="324" y="395">DrawChart (กราฟเส้น/พื้นที่ ทั่วไป)</text>
+  <text x="324" y="415">Tile (KPI), DensityColor (viridis)</text>
+  <text x="324" y="435">Txt, MetalDisc, DrawSpokes, NiceStep</text>
+
+  <rect x="630" y="310" width="310" height="150" rx="8" fill="#fdf4ff" stroke="#c026d3"/>
+  <text x="785" y="332" text-anchor="middle" font-weight="bold" fill="#a21caf">uDevForm — TfrmDev  (Developer)</text>
+  <text x="644" y="355">แท็บ: Live data, Formulas, Layer table,</text>
+  <text x="644" y="375">  Coefficients (TValueListEditor), Export</text>
+  <text x="644" y="395">Export layers CSV</text>
+  <text x="644" y="415">OnParamsChanged → main รีเซ็ตม้วน</text>
+  <text x="644" y="435">ShowTab, ShowExportTab, RefreshData</text>
+
+  <rect x="630" y="485" width="310" height="60" rx="8" fill="#fff7ed" stroke="#f97316"/>
+  <text x="785" y="507" text-anchor="middle" font-weight="bold" fill="#c2410c">uExportTab — TExportPanel</text>
+  <text x="644" y="528">PNG / GIF (Live, Time-lapse) — BGRAAnimatedGif</text>
+
+  <path d="M480,100 L480,133" stroke="#475569" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M380,270 L170,308" stroke="#475569" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M460,270 L460,308" stroke="#475569" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M580,270 L770,308" stroke="#475569" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M785,460 L785,483" stroke="#475569" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M310,385 L292,385" stroke="#475569" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M628,515 C560,515 470,515 460,462" stroke="#f97316" stroke-width="1.4" stroke-dasharray="5 3" fill="none" marker-end="url(#ar)"/>
+  <text x="470" y="508" fill="#c2410c" font-size="12">SetViews(RenderView) → เรียกวาดภาพ</text>
+  <text x="20" y="490" fill="#475569" font-size="12">ลูกศรทึบ = uses / เป็นเจ้าของ ; เส้นประ = callback</text>
+  <text x="20" y="510" fill="#475569" font-size="12">ฟอร์มทั้งหมดสร้างด้วยโค้ด (CreateNew) ไม่มีไฟล์ .lfm</text>
+</svg>
